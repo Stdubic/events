@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('events', 'EventController@index');
+Route::get('/', ['uses' => 'SampleController@calendar']);
+Route::resource('calendar_events', 'CalendarEventController');
