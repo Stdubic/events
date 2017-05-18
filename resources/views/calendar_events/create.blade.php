@@ -18,11 +18,11 @@
                 </div>
                     <div class="form-group">
                      <label for="start">START</label>
-                     <input type="text" name="start" class="form-control" value=""/>
+                     <input type="text" name="start" id="time" class="form-control" value=""/>
                 </div>
                     <div class="form-group">
                      <label for="end">END</label>
-                     <input type="text" name="end" class="form-control" value=""/>
+                     <input type="text" name="end" id="time1" class="form-control" value=""/>
                 </div>
                     <div class="form-group">
                      <label for="is_all_day">IS_ALL_DAY</label>
@@ -35,6 +35,7 @@
 
 
 
+
             <a class="btn btn-default" href="{{ route('calendar_events.index') }}">Back</a>
             <button class="btn btn-primary" type="submit" >Create</button>
             </form>
@@ -42,4 +43,14 @@
     </div>
 
 
+
+
+<script>
+    $('#time').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm:ss'
+    });
+    $('#time1').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm:ss'
+    });
+</script>
 @endsection
