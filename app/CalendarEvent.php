@@ -59,7 +59,7 @@ class CalendarEvent extends Model implements Event
     {
         return [
             'color' => $this->background_color,
-            'url'=>'http://strava.app/calendar_events/'.$this->id,
+            'url'=>'http://127.0.0.1:8000/calendar_events/'.$this->id,
         ];
     }
 }
