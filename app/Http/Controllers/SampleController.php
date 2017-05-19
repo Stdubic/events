@@ -30,7 +30,7 @@ class SampleController extends Controller
             ]
         );
         $databaseEvents = $this->calendarEvent->all();
-        $calendar = \Calendar::addEvent($staticEvent)->addEvents($databaseEvents);
+        $calendar = \Calendar::addEvents($databaseEvents);
         return view('calendar', compact('calendar'));
     }
 }

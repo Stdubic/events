@@ -23,11 +23,11 @@
                 </div>
                     <div class="form-group">
                      <label for="start">START</label>
-                     <input type="text" name="start" class="form-control" value="{{$calendar_event->start}}"/>
+                     <input type="text" name="start" id="time" class="form-control" value="{{$calendar_event->start}}"/>
                 </div>
                     <div class="form-group">
                      <label for="end">END</label>
-                     <input type="text" name="end" class="form-control" value="{{$calendar_event->end}}"/>
+                     <input type="text" name="end" id="time1" class="form-control" value="{{$calendar_event->end}}"/>
                 </div>
                     <div class="form-group">
                      <label for="is_all_day">IS_ALL_DAY</label>
@@ -47,4 +47,16 @@
     </div>
 
 
+<script>
+    $('#time').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm:ss',
+        sideBySide: true,
+        stepping: 15
+    });
+    $('#time1').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm:ss',
+        sideBySide: true,
+        stepping: 15
+    });
+</script>
 @endsection

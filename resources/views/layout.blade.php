@@ -46,12 +46,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Calendar Demo</a>
+            <a class="navbar-brand" href="/">Consilium zakazivanje</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/calendar_events">Edit Database Events</a></li>
+                <li><a href="/calendar_events">Uredi zakazivanje</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

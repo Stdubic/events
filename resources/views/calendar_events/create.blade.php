@@ -47,10 +47,14 @@
 
 <script>
     $('#time').datetimepicker({
-        format: 'YYYY-MM-DD HH:mm:ss'
+            format: 'YYYY-MM-DD HH:mm:ss',
+            sideBySide: true,
+            stepping: 15
     });
     $('#time1').datetimepicker({
-        format: 'YYYY-MM-DD HH:mm:ss'
+            format: 'YYYY-MM-DD HH:mm:ss',
+            sideBySide: true,
+            stepping: 15
     });
 </script>
 @endsection
