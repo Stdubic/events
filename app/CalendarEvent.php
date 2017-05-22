@@ -5,11 +5,20 @@ use MaddHatter\LaravelFullcalendar\Event;
 class CalendarEvent extends Model implements Event
 {
     protected $dates = ['start', 'end'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     /**
      * Get the event's title
      *
      * @return string
      */
+
     public function getTitle()
     {
         return $this->title;

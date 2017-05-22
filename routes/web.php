@@ -16,4 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('/', ['uses' => 'SampleController@calendar']);
+
+
 Route::resource('calendar_events', 'CalendarEventController');
+
+
+Route::get('/register', 'RegistrationController@create');
+Route::get('/register', 'RegistrationController@create');
+Route::post('/register', 'RegistrationController@store');
+
+Route::get('/login', 'SessionsController@create');
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');

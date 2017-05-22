@@ -11,6 +11,7 @@ class CreateCalendarEventsTable extends Migration {
     {
         Schema::create('calendar_events', function(Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
             $table->string('title');
             $table->dateTime('start');
             $table->dateTime('end');

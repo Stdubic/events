@@ -12,6 +12,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>created</th>
                         <th>TITLE</th>
                         <th>START</th>
                         <th>END</th>
@@ -26,6 +27,7 @@
                 @foreach($calendar_events as $calendar_event)
                 <tr>
                     <td>{{$calendar_event->id}}</td>
+                    <td>{{$calendar_event->user->name}}</td>
                     <td>{{$calendar_event->title}}</td>
                     <td>{{$calendar_event->start}}</td>
                     <td>{{$calendar_event->end}}</td>

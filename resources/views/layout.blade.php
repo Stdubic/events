@@ -50,7 +50,11 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/calendar_events">Uredi zakazivanje</a></li>
+
+                @if(Auth::check())
+                         <li><a href="/calendar_events">Uredi zakazivanje</a></li>
+                         <li><a class="nav-link ml-auto" href="#">{{ Auth::user()->name }}</a></li>
+                @endif
             </ul>
         </div><!--/.nav-collapse -->
     </div>
