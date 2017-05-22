@@ -24,10 +24,7 @@
                      <label for="end">END</label>
                      <input type="text" name="end" id="time1" class="form-control" value=""/>
                 </div>
-                    <div class="form-group">
-                     <label for="is_all_day">IS_ALL_DAY</label>
-                     <input type="text" name="is_all_day" class="form-control" value=""/>
-                </div>
+
                     <div class="form-group">
                      <label for="background_color">BACKGROUND_COLOR</label>
                      <input type="text" name="background_color" class="form-control" value=""/>
@@ -49,12 +46,12 @@
     $('#time').datetimepicker({
             format: 'YYYY-MM-DD HH:mm:ss',
             sideBySide: true,
-            stepping: 15
+            stepping: 10
     });
     $('#time1').datetimepicker({
             format: 'YYYY-MM-DD HH:mm:ss',
             sideBySide: true,
-            stepping: 15
+            stepping: 10
     });
 </script>
 @endsection

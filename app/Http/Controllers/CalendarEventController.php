@@ -44,7 +44,7 @@ class CalendarEventController extends Controller
         $calendar_event->user_id          = auth()->id();
         $calendar_event->start            = $request->input("start");
         $calendar_event->end              = $request->input("end");
-        $calendar_event->is_all_day       = $request->input("is_all_day");
+        $calendar_event->is_all_day       = '0';
         $calendar_event->background_color = $request->input("background_color");
         $calendar_event->save();
         return redirect()->route('calendar_events.index')->with('message', 'Item created successfully.');
@@ -86,7 +86,7 @@ class CalendarEventController extends Controller
 
         $calendar_event->start            = $request->input("start");
         $calendar_event->end              = $request->input("end");
-        $calendar_event->is_all_day       = $request->input("is_all_day");
+        $calendar_event->is_all_day       = '0';
         $calendar_event->background_color = $request->input("background_color");
         $calendar_event->save();
         return redirect()->route('calendar_events.index')->with('message', 'Item updated successfully.');
