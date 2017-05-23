@@ -1,7 +1,9 @@
 <?php namespace App\Http\Controllers;
 use App\CalendarEvent;
 use App\Http\Requests;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -19,7 +21,9 @@ class CalendarEventController extends Controller
      */
     public function index()
     {
-        $calendar_events = CalendarEvent::all();
+        $now = Carbon::now();
+        $calendar_events = CalendarEvent::where('start', '>', $now)->orderBy('start', 'asc')->get();
+        //$calendar_events = DB::table('calendar_events')->where('start', '>', $now)->get();
         return view('calendar_events.index', compact('calendar_events'));
     }
     /**
@@ -40,7 +44,7 @@ class CalendarEventController extends Controller
     public function store(Request $request)
     {
         $calendar_event = new CalendarEvent();
-        $calendar_event->title            = $request->input("title");
+        $calendar_event->title            = $request->input("title").'/'.$request->input("dr");
         $calendar_event->user_id          = auth()->id();
         $calendar_event->start            = $request->input("start");
         $calendar_event->end              = $request->input("end");

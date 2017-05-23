@@ -14,24 +14,20 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="form-group">
-                    <label for="nome">ID</label>
-                    <p class="form-control-static">{{$calendar_event->id}}</p>
-                </div>
-                <div class="form-group">
-                     <label for="title">TITLE</label>
+                     <label for="title">Pacijent/Lekar</label>
                      <input type="text" name="title" class="form-control" value="{{$calendar_event->title}}"/>
                 </div>
                     <div class="form-group">
-                     <label for="start">START</label>
+                     <label for="start">Pocetak Pregleda</label>
                      <input type="text" name="start" id="time" class="form-control" value="{{$calendar_event->start}}"/>
                 </div>
                     <div class="form-group">
-                     <label for="end">END</label>
+                     <label for="end">Kraj Pregleda</label>
                      <input type="text" name="end" id="time1" class="form-control" value="{{$calendar_event->end}}"/>
                 </div>
 
                     <div class="form-group">
-                     <label for="background_color">BACKGROUND_COLOR</label>
+                     <label for="background_color">Ordinacija</label>
                      <input type="text" name="background_color" class="form-control" value="{{$calendar_event->background_color}}"/>
                 </div>
 

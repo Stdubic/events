@@ -13,25 +13,33 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="form-group">
-                     <label for="title">TITLE</label>
-                     <input type="text" name="title" class="form-control" value=""/>
+                     <label for="title">Pacijent</label>
+                     <input type="text" name="title" class="form-control" value="" required/>
+                </div>
+                <div class="form-group">
+                                     <label for="dr">Lekar</label>
+                                     <select name="dr" class="form-control">
+                                       <option>Dr.Spira</option>
+                                       <option>Dr.Goshko</option>
+                                       <option>Dr.Dragisha</option>
+                                     </select>
+                 </div>
+                    <div class="form-group">
+                     <label for="start">Pocetak Pregleda</label>
+                     <input type="text" name="start" id="time" class="form-control" value="" required/>
                 </div>
                     <div class="form-group">
-                     <label for="start">START</label>
-                     <input type="text" name="start" id="time" class="form-control" value=""/>
+                     <label for="end">Kraj Pregleda</label>
+                     <input type="text" name="end" id="time1" class="form-control" value="" required/>
                 </div>
-                    <div class="form-group">
-                     <label for="end">END</label>
-                     <input type="text" name="end" id="time1" class="form-control" value=""/>
+                     <div class="form-group">
+                     <label for="background_color">Ordinacija</label>
+                     <select name="background_color" class="form-control">
+                       <option value='Blue'>Ordinacija Blue</option>
+                       <option value='Red'>Ordinacija Red</option>
+                       <option value='Green'>Ordinacija Green</option>
+                     </select>
                 </div>
-
-                    <div class="form-group">
-                     <label for="background_color">BACKGROUND_COLOR</label>
-                     <input type="text" name="background_color" class="form-control" value=""/>
-                </div>
-
-
-
 
             <a class="btn btn-default" href="{{ route('calendar_events.index') }}">Back</a>
             <button class="btn btn-primary" type="submit" >Create</button>

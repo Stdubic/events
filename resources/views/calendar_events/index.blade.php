@@ -11,12 +11,12 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>created</th>
-                        <th>TITLE</th>
-                        <th>START</th>
-                        <th>END</th>
-                        <th>BACKGROUND_COLOR</th>
+
+                        <th>Pacijent/Lekar</th>
+                        <th>Pocetak Pregleda</th>
+                        <th>Kraj Pregleda</th>
+                        <th>Ordinacija</th>
+                        <th>Zakazao</th>
                         <th class="text-right">OPTIONS</th>
                     </tr>
                 </thead>
@@ -24,13 +24,14 @@
                 <tbody>
 
                 @foreach($calendar_events as $calendar_event)
+
                 <tr>
-                    <td>{{$calendar_event->id}}</td>
-                    <td>{{$calendar_event->user->name}}</td>
+
                     <td>{{$calendar_event->title}}</td>
                     <td>{{$calendar_event->start}}</td>
                     <td>{{$calendar_event->end}}</td>
                     <td>{{$calendar_event->background_color}}</td>
+                    <td>{{$calendar_event->user->name}}</td>
 
                     <td class="text-right">
                         <a class="btn btn-primary" href="{{ route('calendar_events.show', $calendar_event->id) }}">View</a>

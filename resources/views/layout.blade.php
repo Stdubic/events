@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+    {{--<meta http-equiv="refresh" content="10" > --}}
     <link rel="icon" href="favicon.ico">
 
-    <title>Calendar Demo</title>
+    <title>Consilium</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
@@ -24,7 +28,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
 
-   
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
@@ -55,16 +59,14 @@
             <ul class="nav navbar-nav">
 
                 @if(Auth::check())
-                         <li><a href="/calendar">Kalendar</a></li>
-                         <li><a href="/calendar_events">Uredi zakazivanje</a></li>
-                            @if(Auth::check())
-                                                         <li><a href="/logout"  role="button">Logout</a></li>
-                                                    @elseif( ! Auth::check())
-
-                                                     <li><a href="/login"  role="button">Login</a></li>
-
-                                                    @endif
-                         <li><a class="nav-link ml-auto" href="#">{{ Auth::user()->name }}</a></li>
+                    <li class = "col-md-2"><a href="/calendar">Kalendar</a></li>
+                    <li class = "col-md-6"><a href="/calendar_events">Uredi zakazivanje</a></li>
+                @if(Auth::check())
+                    <li class = "col-md-2"><a href="/logout"  role="button">Logout</a></li>
+                @elseif( ! Auth::check())
+                    <li class = "col-md-2"><a href="/login"  role="button">Login</a></li>
+                @endif
+                    <li class = "col-md-2"><a class="nav-link ml-auto" href="#">{{ Auth::user()->name }}</a></li>
                 @endif
             </ul>
         </div><!--/.nav-collapse -->
