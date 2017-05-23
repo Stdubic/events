@@ -26,10 +26,7 @@
                      <label for="end">END</label>
                      <p class="form-control-static">{{$calendar_event->end}}</p>
                 </div>
-                    <div class="form-group">
-                     <label for="is_all_day">IS_ALL_DAY</label>
-                     <p class="form-control-static">{{$calendar_event->is_all_day}}</p>
-                </div>
+
                     <div class="form-group">
                      <label for="background_color">BACKGROUND_COLOR</label>
                      <p class="form-control-static">{{$calendar_event->background_color}}</p>

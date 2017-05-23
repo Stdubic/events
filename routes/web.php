@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome1');
+//});
 
-Route::get('/', ['uses' => 'SampleController@calendar']);
+Route::get('/calendar', ['uses' => 'SampleController@calendar']);
 
 
 Route::resource('calendar_events', 'CalendarEventController');
@@ -25,6 +25,8 @@ Route::get('/register', 'RegistrationController@create');
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
+Route::get('/', 'SessionsController@create');
 Route::get('/login', 'SessionsController@create');
-Route::post('/login', 'SessionsController@store');
+//Route::post('/login', 'SessionsController@store');
+Route::post('login', [ 'as' => 'login', 'uses' => 'SessionsController@store']);
 Route::get('/logout', 'SessionsController@destroy');

@@ -16,7 +16,6 @@
                         <th>TITLE</th>
                         <th>START</th>
                         <th>END</th>
-                        <th>IS_ALL_DAY</th>
                         <th>BACKGROUND_COLOR</th>
                         <th class="text-right">OPTIONS</th>
                     </tr>
@@ -31,7 +30,6 @@
                     <td>{{$calendar_event->title}}</td>
                     <td>{{$calendar_event->start}}</td>
                     <td>{{$calendar_event->end}}</td>
-                    <td>{{$calendar_event->is_all_day}}</td>
                     <td>{{$calendar_event->background_color}}</td>
 
                     <td class="text-right">

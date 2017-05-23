@@ -20,7 +20,7 @@ class SessionsController extends Controller
         if (! auth()->attempt(request(['email', 'password']))){
             return back();
             }
-        return redirect('/');
+        return redirect('/calendar');
     }
 
     public function destroy()
