@@ -19,9 +19,9 @@
                 <div class="form-group">
                                      <label for="dr">Lekar</label>
                                      <select name="dr" class="form-control">
-                                       <option>Dr.Spira</option>
-                                       <option>Dr.Goshko</option>
-                                       <option>Dr.Dragisha</option>
+                                       <option value='1'>Dr.Spira</option>
+                                       <option value='2'>Dr.Goshko</option>
+                                       <option value='3'>Dr.Dragisha</option>
                                      </select>
                  </div>
                     <div class="form-group">

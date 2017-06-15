@@ -13,6 +13,14 @@ class CalendarEvent extends Model implements Event
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function doctor()
+    {
+        return $this->belongsTo(Doctor::class);
+    }
     /**
      * Get the event's title
      *

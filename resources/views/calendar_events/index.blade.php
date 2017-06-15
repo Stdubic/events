@@ -12,7 +12,8 @@
                 <thead>
                     <tr>
 
-                        <th>Pacijent/Lekar</th>
+                        <th>Lekar</th>
+                        <th>Pacijent</th>
                         <th>Pocetak Pregleda</th>
                         <th>Kraj Pregleda</th>
                         <th>Ordinacija</th>
@@ -27,11 +28,13 @@
 
                 <tr>
 
+                    <td>{{$calendar_event->doctor->name}}</td>
                     <td>{{$calendar_event->title}}</td>
                     <td>{{$calendar_event->start}}</td>
                     <td>{{$calendar_event->end}}</td>
                     <td>{{$calendar_event->background_color}}</td>
                     <td>{{$calendar_event->user->name}}</td>
+
 
                     <td class="text-right">
                         <a class="btn btn-primary" href="{{ route('calendar_events.show', $calendar_event->id) }}">View</a>
