@@ -17,12 +17,14 @@
                      <input type="text" name="title" class="form-control" value="" required/>
                 </div>
                 <div class="form-group">
+
                                      <label for="dr">Lekar</label>
                                      <select name="dr" class="form-control">
-                                       <option value='1'>Dr.Spira</option>
-                                       <option value='2'>Dr.Goshko</option>
-                                       <option value='3'>Dr.Dragisha</option>
+                                     @foreach($doctors as $doctor)
+                                       <option value='{{$doctor->id}}'>{{$doctor->name}}</option>
+                                    @endforeach
                                      </select>
+
                  </div>
                     <div class="form-group">
                      <label for="start">Pocetak Pregleda</label>

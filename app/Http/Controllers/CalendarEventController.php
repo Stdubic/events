@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use App\CalendarEvent;
+use App\Doctor;
 use App\Http\Requests;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -33,7 +34,8 @@ class CalendarEventController extends Controller
      */
     public function create()
     {
-        return view('calendar_events.create');
+        $doctors = Doctor::all();
+        return view('calendar_events.create', compact('doctors'));
     }
     /**
      * Store a newly created resource in storage.
@@ -74,7 +76,8 @@ class CalendarEventController extends Controller
     public function edit($id)
     {
         $calendar_event = CalendarEvent::findOrFail($id);
-        return view('calendar_events.edit', compact('calendar_event'));
+        $doctors = Doctor::all();
+        return view('calendar_events.edit', compact('calendar_event','doctors'));
     }
     /**
      * Update the specified resource in storage.

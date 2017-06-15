@@ -13,8 +13,16 @@
                 <input type="hidden" name="_method" value="PUT">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
+                 <div class="form-group">
+                    <label for="dr">Lekar</label>
+                    <select name="dr" class="form-control">
+                        @foreach($doctors as $doctor)
+                            <option value='{{$doctor->id}}'>{{$doctor->name}}</option>
+                        @endforeach
+                    </select>
+                 </div>
                 <div class="form-group">
-                     <label for="title">Pacijent/Lekar</label>
+                     <label for="title">Pacijent</label>
                      <input type="text" name="title" class="form-control" value="{{$calendar_event->title}}"/>
                 </div>
                     <div class="form-group">
