@@ -14,6 +14,8 @@ class SampleController extends Controller
      */
     public function __construct(CalendarEvent $calendarEvent)
     {
+        $this->middleware('auth');
+
         $this->calendarEvent = $calendarEvent;
     }
     public function calendar()

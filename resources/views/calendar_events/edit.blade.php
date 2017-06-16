@@ -17,7 +17,7 @@
                     <label for="dr">Lekar</label>
                     <select name="dr" class="form-control">
                         @foreach($doctors as $doctor)
-                            <option value='{{$doctor->id}}'>{{$doctor->name}}</option>
+                            <option @if($calendar_event->doctor->name == $doctor->name) selected='selected' @endif value='{{$doctor->id}}'>{{$doctor->name}}</option>
                         @endforeach
                     </select>
                  </div>
@@ -35,9 +35,13 @@
                 </div>
 
                     <div class="form-group">
-                     <label for="background_color">Ordinacija</label>
-                     <input type="text" name="background_color" class="form-control" value="{{$calendar_event->background_color}}"/>
-                </div>
+                                        <label for="background_color">Ordinacija</label>
+                                        <select name="background_color" class="form-control">
+                                          <option value='Blue' @if($calendar_event->background_color == 'Blue') selected='selected' @endif>Ordinacija Blue</option>
+                                          <option value='Red'@if($calendar_event->background_color == 'Red') selected='selected' @endif>Ordinacija Red</option>
+                                          <option value='Green'@if($calendar_event->background_color == 'Green') selected='selected' @endif>Ordinacija Green</option>
+                                        </select>
+                                   </div>
 
 
 
