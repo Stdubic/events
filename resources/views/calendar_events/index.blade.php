@@ -47,6 +47,7 @@
 
                 </tbody>
             </table>
+            {{$calendar_events->links()}}
 
             <a class="btn btn-success" href="{{ route('calendar_events.create') }}">Create</a>
         </div>

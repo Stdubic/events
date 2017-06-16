@@ -23,7 +23,7 @@ class CalendarEventController extends Controller
     public function index()
     {
         $now = Carbon::now();
-        $calendar_events = CalendarEvent::where('start', '>', $now)->orderBy('start', 'asc')->get();
+        $calendar_events = CalendarEvent::where('start', '>', $now)->orderBy('start', 'asc')->paginate(10);
         //$calendar_events = DB::table('calendar_events')->where('start', '>', $now)->get();
         return view('calendar_events.index', compact('calendar_events'));
     }

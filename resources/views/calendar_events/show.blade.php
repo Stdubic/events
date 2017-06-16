@@ -11,24 +11,24 @@
 
             <form action="#">
                 <div class="form-group">
-                    <label for="nome">ID</label>
-                    <p class="form-control-static">{{$calendar_event->id}}</p>
+                    <label for="nome">Lekar</label>
+                    <p class="form-control-static">{{$calendar_event->doctor->name}}</p>
                 </div>
                 <div class="form-group">
-                     <label for="title">TITLE</label>
+                     <label for="title">Pacijent</label>
                      <p class="form-control-static">{{$calendar_event->title}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="start">START</label>
+                     <label for="start">Pocetak Pregleda</label>
                      <p class="form-control-static">{{$calendar_event->start}}</p>
                 </div>
                     <div class="form-group">
-                     <label for="end">END</label>
+                     <label for="end">Kraj Pregleda</label>
                      <p class="form-control-static">{{$calendar_event->end}}</p>
                 </div>
 
                     <div class="form-group">
-                     <label for="background_color">BACKGROUND_COLOR</label>
+                     <label for="background_color">Ordinacija</label>
                      <p class="form-control-static">{{$calendar_event->background_color}}</p>
                 </div>
             </form>
