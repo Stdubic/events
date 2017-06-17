@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="page-header">
-        <h1>CalendarEvents / Edit </h1>
+        <h1>Uredi zakazivanje pacijenta : {{$calendar_event->title}} </h1>
     </div>
 
 
@@ -45,8 +45,8 @@
 
 
 
-            <a class="btn btn-default" href="{{ route('calendar_events.index') }}">Back</a>
-            <button class="btn btn-primary" type="submit" >Save</button>
+            <a class="btn btn-default" href="{{ route('calendar_events.index') }}">Nazad</a>
+            <button class="btn btn-primary" type="submit" >Zapamti</button>
             </form>
         </div>
     </div>

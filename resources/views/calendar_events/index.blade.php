@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="page-header">
-        <h1>Consilium Dr. Spira Patient Appointments</h1>
+        <h1>Lista zakazanih pacijenata</h1>
     </div>
 
 
@@ -18,7 +18,7 @@
                         <th>Kraj Pregleda</th>
                         <th>Ordinacija</th>
                         <th>Zakazao</th>
-                        <th class="text-right">OPTIONS</th>
+                        <th class="text-right">Opcije</th>
                     </tr>
                 </thead>
 
@@ -37,9 +37,9 @@
 
 
                     <td class="text-right">
-                        <a class="btn btn-primary" href="{{ route('calendar_events.show', $calendar_event->id) }}">View</a>
-                        <a class="btn btn-warning " href="{{ route('calendar_events.edit', $calendar_event->id) }}">Edit</a>
-                        <form action="{{ route('calendar_events.destroy', $calendar_event->id) }}" method="POST" style="display: inline;" onsubmit="if(confirm('Delete? Are you sure?')) { return true } else {return false };"><input type="hidden" name="_method" value="DELETE"><input type="hidden" name="_token" value="{{ csrf_token() }}"> <button class="btn btn-danger" type="submit">Delete</button></form>
+                        {{--<a class="btn btn-primary" href="{{ route('calendar_events.show', $calendar_event->id) }}">View</a>--}}
+                        <a class="btn btn-warning " href="{{ route('calendar_events.edit', $calendar_event->id) }}">Uredi</a>
+                        <form action="{{ route('calendar_events.destroy', $calendar_event->id) }}" method="POST" style="display: inline;" onsubmit="if(confirm('Obriši? Da li si siguran?')) { return true } else {return false };"><input type="hidden" name="_method" value="DELETE"><input type="hidden" name="_token" value="{{ csrf_token() }}"> <button class="btn btn-danger" type="submit">Obriši</button></form>
                     </td>
                 </tr>
 
@@ -49,7 +49,7 @@
             </table>
             {{$calendar_events->links()}}
 
-            <a class="btn btn-success" href="{{ route('calendar_events.create') }}">Create</a>
+            <a class="btn btn-success" href="{{ route('calendar_events.create') }}">Zakaži</a>
         </div>
     </div>
 
