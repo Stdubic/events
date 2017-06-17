@@ -39,7 +39,11 @@
 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-
+  <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token()
+        ]); ?>;
+    </script>
 
 
 </head>
@@ -68,11 +72,11 @@
                                 <li ><a href="/calendar_events">Uredi zakazivanje</a></li>
 
             <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lekari <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="/doctors/1">Dr.Špira</a></li>
+                        <li><a href="/doctors/2">Dr.Goško</a></li>
+                        <li><a href="/doctors/3">Dr.Dragiša</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Separated link</a></li>
                         <li role="separator" class="divider"></li>

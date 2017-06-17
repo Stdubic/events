@@ -28,6 +28,19 @@ class CalendarEventController extends Controller
         return view('calendar_events.index', compact('calendar_events'));
     }
     /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function doctors($id)
+    {
+        $now = Carbon::now();
+        $calendar_events = CalendarEvent::where('start', '>', $now)->where('doctor_id', $id)->orderBy('start', 'asc')->paginate(10);
+        //$calendar_events = DB::table('calendar_events')->where('start', '>', $now)->get();
+        $doctors = Doctor::all();
+        return view('calendar_events.doctors', compact('calendar_events','doctors'));
+    }
+    /**
      * Show the form for creating a new resource.
      *
      * @return Response
