@@ -14,6 +14,7 @@
 
                         <th>Lekar</th>
                         <th>Pacijent</th>
+                        <th>Telefon</th>
                         <th>Pocetak Pregleda</th>
                         <th>Kraj Pregleda</th>
                         <th>Ordinacija</th>
@@ -30,6 +31,7 @@
 
                     <td>{{$calendar_event->doctor->name}}</td>
                     <td>{{$calendar_event->title}}</td>
+                    <td>{{$calendar_event->phone}}</td>
                     <td>{{$calendar_event->start}}</td>
                     <td>{{$calendar_event->end}}</td>
                     <td>{{$calendar_event->background_color}}</td>

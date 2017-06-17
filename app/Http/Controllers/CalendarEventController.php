@@ -60,6 +60,7 @@ class CalendarEventController extends Controller
     {
         $calendar_event = new CalendarEvent();
         $calendar_event->title            = $request->input("title");
+        $calendar_event->phone            = $request->input("phone");
         $calendar_event->user_id          = auth()->id();
         $calendar_event->doctor_id        = $request->input("dr");
         $calendar_event->start            = $request->input("start");
@@ -104,7 +105,7 @@ class CalendarEventController extends Controller
         $calendar_event = CalendarEvent::findOrFail($id);
         $calendar_event->user_id          = auth()->id();
         $calendar_event->title            = $request->input("title");
-
+        $calendar_event->phone            = $request->input("phone");
         $calendar_event->start            = $request->input("start");
         $calendar_event->end              = $request->input("end");
         $calendar_event->is_all_day       = '0';

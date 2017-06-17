@@ -7,7 +7,7 @@
 
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
 
             <form action="{{ route('calendar_events.store') }}" method="POST">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -15,6 +15,10 @@
                 <div class="form-group">
                      <label for="title">Pacijent</label>
                      <input type="text" name="title" class="form-control" value="" required/>
+                </div>
+                <div class="form-group">
+                     <label for="phone">Telefon</label>
+                     <input type="number" name="phone" class="form-control" value="" required/>
                 </div>
                 <div class="form-group">
 

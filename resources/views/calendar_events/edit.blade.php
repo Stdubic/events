@@ -25,6 +25,10 @@
                      <label for="title">Pacijent</label>
                      <input type="text" name="title" class="form-control" value="{{$calendar_event->title}}"/>
                 </div>
+                <div class="form-group">
+                                     <label for="title">Telefon</label>
+                                     <input type="number" name="title" class="form-control" value="{{$calendar_event->phone}}"/>
+                                </div>
                     <div class="form-group">
                      <label for="start">Pocetak Pregleda</label>
                      <input type="text" name="start" id="time" class="form-control" value="{{$calendar_event->start}}"/>
