@@ -16,6 +16,7 @@
 //});
 
 Route::get('/calendar', ['uses' => 'SampleController@calendar']);
+Route::get('/drcalendar/{id}', ['uses' => 'DoctorsEventsController@calendar']);
 
 
 Route::resource('calendar_events', 'CalendarEventController');
