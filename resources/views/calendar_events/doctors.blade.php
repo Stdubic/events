@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="page-header">
-        <h1>Lista zakazanih pacijenata Dr. {{ $doctors[request()->route()->parameters['id']-1]->name}}</h1>
+        <h1>Lista zakazanih pacijenata {{ $doctors[request()->route()->parameters['id']-1]->name}}</h1>
     </div>
 
 

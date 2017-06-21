@@ -50,7 +50,6 @@
 
 <body>
 
-
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -74,9 +73,9 @@
             <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lekari <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li><a href="/doctors/1">Dr.Špira</a></li>
-                        <li><a href="/doctors/2">Dr.Goško</a></li>
-                        <li><a href="/doctors/3">Dr.Dragiša</a></li>
+                      @foreach($doctors as $doctor)
+                        <li><a href="/doctors/{{$doctor->id}}">{{$doctor->name}}</a></li>
+                      @endforeach
                         {{--<li role="separator" class="divider"></li>--}}
                         {{--<li><a href="#">Separated link</a></li>--}}
                         {{--<li role="separator" class="divider"></li>--}}
@@ -87,9 +86,9 @@
      <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kalendar Lekari <span class="caret"></span></a>
                           <ul class="dropdown-menu">
-                            <li><a href="/drcalendar/1">Dr.Špira</a></li>
-                            <li><a href="/drcalendar/2">Dr.Goško</a></li>
-                            <li><a href="/drcalendar/3">Dr.Dragiša</a></li>
+                          @foreach($doctors as $doctor)
+                            <li><a href="/drcalendar/{{$doctor->id}}">{{$doctor->name}}</a></li>
+                          @endforeach
                             {{--<li role="separator" class="divider"></li>--}}
                             {{--<li><a href="#">Separated link</a></li>--}}
                             {{--<li role="separator" class="divider"></li>--}}

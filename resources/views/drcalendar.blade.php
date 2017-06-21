@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('content')
-<div class="page-header">
-        <h1>Kalendar zakazanih pacijenata {{ $doctors[request()->route()->parameters['id']-1]->name}}</h1>
+<div class="page-header  col-md-offset-5">
+        <h1>Kalendar <b>  {{ $doctors[request()->route()->parameters['id']-1]->name}}</b> </h1>
     </div>
     {!! $drcalendar->calendar() !!}
 @stop
