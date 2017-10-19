@@ -1,11 +1,11 @@
 @extends('layout')
 
 @section('content')
-    <div class="page-header">
-        <h1>login </h1>
+    <div class="page-header col-md-4 col-md-offset-4">
+        <h1>Prijava na sistem </h1>
     </div>
     <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-4 col-md-offset-4">
 
                 <form action="/login" method="POST">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -25,6 +25,8 @@
                 </form>
             </div>
         </div>
+
+
 
 
 @stop

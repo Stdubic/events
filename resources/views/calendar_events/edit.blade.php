@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                                      <label for="title">Telefon</label>
-                                     <input type="number" name="title" class="form-control" value="{{$calendar_event->phone}}"/>
+                                     <input type="number" name="phone" class="form-control" value="{{$calendar_event->phone}}"/>
                                 </div>
                     <div class="form-group">
                      <label for="start">Pocetak Pregleda</label>
